@@ -7,7 +7,7 @@ class App < Sinatra::Base
   # end
 
   get '/' do
-  send_file './public/index.html'
-end
+    send_file './public/index.html'
+  end
 
 end
