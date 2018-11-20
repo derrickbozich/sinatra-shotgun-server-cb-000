@@ -29,11 +29,6 @@ class App < Sinatra::Base
     response = HTTParty.get(url)
     response.parsed_response
     binding.pry
-
-
-
-
-     binding.pry
   end
 
 end
