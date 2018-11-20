@@ -17,8 +17,8 @@ class App < Sinatra::Base
 
     
     res = Faraday.get endpoint do |req|
-       # req.params['api-key'] = nyt_api_key
-       # req.params['query'] = query
+       req.params['api-key'] = nyt_api_key
+       req.params['query'] = query
      end
 
 
