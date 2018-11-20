@@ -10,9 +10,9 @@ class App < Sinatra::Base
 
   post '/search' do
     query = params['q']
-    # nyt_api_key = 'f98593a095b44546bf4073744b540da0'
-    # url = 'https://api.nytimes.com/svc/movies/v2/reviews/query=' + query +
-    #  '&api-key=' + nyt_api_key
+    nyt_api_key = 'f98593a095b44546bf4073744b540da0'
+    url = 'https://api.nytimes.com/svc/movies/v2/reviews/query=' + query +
+     '&api-key=' + nyt_api_key
     #
     # res = Faraday.get url do |req|
     #    #  req.params['api-key'] = nyt_api_key
@@ -25,11 +25,11 @@ class App < Sinatra::Base
 
 
     # url = 'https://api.spotify.com/v1/search?type=artist&q=' + query
-    url = 'https://api.spotify.com/v1/search?type=artist&q=tycho'
+    # url = 'https://api.spotify.com/v1/search?type=artist&q=tycho'
     response = HTTParty.get(url)
     response.parsed_response
     binding.pry
-    
+
 
 
 
