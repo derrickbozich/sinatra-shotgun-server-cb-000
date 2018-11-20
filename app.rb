@@ -2,10 +2,12 @@ require_relative 'config/environment'
 
 class App < Sinatra::Base
 
-  
-
   get '/' do
-    send_file '../public/index.html'
+    "Started my server using edit Shotgun! edit"
   end
+
+#   get '/' do
+#   send_file '../public/index.html'
+# end
 
 end
