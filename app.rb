@@ -16,18 +16,14 @@ class App < Sinatra::Base
     endpoint = 'https://api.nytimes.com/svc/movies/v2/reviews/'
 
     #
-    # res = Faraday.get url do |req|
+    # res = Faraday.get endpoint do |req|
     #    # req.params['api-key'] = nyt_api_key
-    #    # req.params['client_secret'] = client_secret
-    #    # req.params['v'] = '20160201'
-    #    # req.params['near'] = params[:zipcode]
-    #    # req.params['query'] = 'coffee shop'
-    #    req.response :json
+    #    # req.params['query'] = query
     #  end
 
 
 
-    
+
     binding.pry
   end
 
