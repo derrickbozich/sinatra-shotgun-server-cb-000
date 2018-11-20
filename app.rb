@@ -18,6 +18,7 @@ class App < Sinatra::Base
        req.params['api-key'] = nyt_api_key
        req.params['q'] = query
      end
+     @response = JSON.parse(res.body)
      binding.pry
 
     # uri = URI("https://api.nytimes.com/svc/search/v2/articlesearch.json")
