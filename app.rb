@@ -11,14 +11,13 @@ class App < Sinatra::Base
   post '/search' do
     query = params['q']
     # nyt_api_key = 'a071bd4ce142480c84ce0f54bc695e09'
-    # url = 'https://api.nytimes.com/svc/movies/v2/reviews/query=' + query +
-    #  '&api-key=' + nyt_api_key
+    # url = 'https://api.nytimes.com/svc/search/v2/articlesearch.json'
     # endpoint = 'https://api.nytimes.com/svc/movies/v2/reviews/'
     #
     #
     # res = Faraday.get endpoint do |req|
     #    req.params['api-key'] = nyt_api_key
-    #    req.params['query'] = query
+    #    req.params['q'] = query
     #  end
 
     uri = URI("https://api.nytimes.com/svc/search/v2/articlesearch.json")
@@ -30,13 +29,13 @@ class App < Sinatra::Base
     })
     request = Net::HTTP::Get.new(uri.request_uri)
     @result = JSON.parse(http.request(request).body)
-    binding.pry
+    binding.pryqq
     puts @result.inspect
 
 
 
 
-    
+
   end
 
 end
