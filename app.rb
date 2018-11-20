@@ -10,4 +10,9 @@ class App < Sinatra::Base
     send_file './public/index.html'
   end
 
+  post '/search' do
+    binding.pry
+    'search'
+  end
+
 end
