@@ -4,7 +4,10 @@ GEM
     coderay (1.1.0)
     daemons (1.2.3)
     eventmachine (1.0.8)
+    faraday (0.15.3)
+      multipart-post (>= 1.2, < 3)
     method_source (0.8.2)
+    multipart-post (2.0.0)
     pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -31,6 +34,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  faraday
   pry
   rake
   require_all
@@ -39,4 +43,4 @@ DEPENDENCIES
   thin
 
 BUNDLED WITH
-   1.10.6
+   1.17.1
