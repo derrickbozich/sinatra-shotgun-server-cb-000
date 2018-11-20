@@ -11,6 +11,7 @@ class App < Sinatra::Base
   end
 
   post '/search' do
+    query = params['q']
     binding.pry
     nyt_api_key = 'f98593a095b44546bf4073744b540da0'
     url = 'https://api.nytimes.com/svc/movies/v2/reviews/query=' + query +
