@@ -1,6 +1,5 @@
 require_relative 'config/environment'
-require 'json'
-require 'rest-client'
+
 
 class App < Sinatra::Base
 
