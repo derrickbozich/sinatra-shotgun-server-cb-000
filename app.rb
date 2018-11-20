@@ -22,7 +22,7 @@ class App < Sinatra::Base
        req.response :json
      end
 
-     JSON.parse(res)
+     
 
      binding.pry
   end
