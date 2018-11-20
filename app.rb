@@ -25,7 +25,7 @@ class App < Sinatra::Base
 
     url = 'https://api.spotify.com/v1/search?type=artist&q=' + query
     response = RestClient.get(url)
-    JSON.parse(response)
+    data = JSON.parse(response)
 
 
 
