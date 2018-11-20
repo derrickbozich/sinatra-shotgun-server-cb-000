@@ -23,6 +23,7 @@ class App < Sinatra::Base
        # req.params['near'] = params[:zipcode]
        # req.params['query'] = 'coffee shop'
      end
+     res.to_json
      binding.pry
   end
 
