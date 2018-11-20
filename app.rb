@@ -10,27 +10,27 @@ class App < Sinatra::Base
 
   post '/search' do
     query = params['q']
-    # nyt_api_key = 'a071bd4ce142480c84ce0f54bc695e09'
-    # url = 'https://api.nytimes.com/svc/search/v2/articlesearch.json'
-    # endpoint = 'https://api.nytimes.com/svc/movies/v2/reviews/'
-    #
-    #
-    # res = Faraday.get endpoint do |req|
-    #    req.params['api-key'] = nyt_api_key
-    #    req.params['q'] = query
-    #  end
+    nyt_api_key = 'a071bd4ce142480c84ce0f54bc695e09'
+    endpoint = 'https://api.nytimes.com/svc/search/v2/articlesearch.json'
 
-    uri = URI("https://api.nytimes.com/svc/search/v2/articlesearch.json")
-    http = Net::HTTP.new(uri.host, uri.port)
-    http.use_ssl = true
-    uri.query = URI.encode_www_form({
-      "api-key" => "a071bd4ce142480c84ce0f54bc695e09",
-      "q" => query
-    })
-    request = Net::HTTP::Get.new(uri.request_uri)
-    @result = JSON.parse(http.request(request).body)
-    binding.pryqq
-    puts @result.inspect
+
+    res = Faraday.get endpoint do |req|
+       req.params['api-key'] = nyt_api_key
+       req.params['q'] = query
+     end
+     binding.pry
+
+    # uri = URI("https://api.nytimes.com/svc/search/v2/articlesearch.json")
+    # http = Net::HTTP.new(uri.host, uri.port)
+    # http.use_ssl = true
+    # uri.query = URI.encode_www_form({
+    #   "api-key" => "a071bd4ce142480c84ce0f54bc695e09",
+    #   "q" => query
+    # })
+    # request = Net::HTTP::Get.new(uri.request_uri)
+    # @result = JSON.parse(http.request(request).body)
+    # binding.pry
+    # puts @result.inspect
 
 
 
