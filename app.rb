@@ -17,20 +17,10 @@ class App < Sinatra::Base
        req.params['api-key'] = nyt_api_key
        req.params['q'] = query
      end
-     @response = JSON.parse(res.body)
+     @result = JSON.parse(res.body)
      binding.pry
 
-    # uri = URI("https://api.nytimes.com/svc/search/v2/articlesearch.json")
-    # http = Net::HTTP.new(uri.host, uri.port)
-    # http.use_ssl = true
-    # uri.query = URI.encode_www_form({
-    #   "api-key" => "a071bd4ce142480c84ce0f54bc695e09",
-    #   "q" => query
-    # })
-    # request = Net::HTTP::Get.new(uri.request_uri)
-    # @result = JSON.parse(http.request(request).body)
-    # binding.pry
-    # puts @result.inspect
+  
 
 
 
