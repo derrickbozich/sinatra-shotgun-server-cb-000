@@ -23,7 +23,7 @@ class App < Sinatra::Base
     #  end
 
 
-    url = 'https://api.spotify.com/v1/search?type=artist&q=tycho'
+    url = 'https://api.spotify.com/v1/search?type=artist&q=' + query
     response = RestClient.get(url)
     JSON.parse(response)
 
