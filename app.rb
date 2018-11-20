@@ -12,7 +12,6 @@ class App < Sinatra::Base
 
   post '/search' do
     binding.pry
-    'search'
   end
 
 end
