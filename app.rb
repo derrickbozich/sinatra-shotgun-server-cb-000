@@ -15,11 +15,11 @@ class App < Sinatra::Base
      '&api-key=' + nyt_api_key
     endpoint = 'https://api.nytimes.com/svc/movies/v2/reviews/'
 
-    #
-    # res = Faraday.get endpoint do |req|
-    #    # req.params['api-key'] = nyt_api_key
-    #    # req.params['query'] = query
-    #  end
+    
+    res = Faraday.get endpoint do |req|
+       # req.params['api-key'] = nyt_api_key
+       # req.params['query'] = query
+     end
 
 
 
