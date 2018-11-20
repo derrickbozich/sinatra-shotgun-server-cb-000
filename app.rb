@@ -20,12 +20,6 @@ class App < Sinatra::Base
      @result = JSON.parse(res.body)
      binding.pry
 
-  
-
-
-
-
-
   end
 
 end
